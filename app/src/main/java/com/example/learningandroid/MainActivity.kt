@@ -4,11 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 
-class FragmentBlank : Fragment(R.layout.fragment_blank)
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 //    private fun addFragmentToActivity(fragment: Fragment?){
 //
@@ -33,7 +31,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         if(savedInstanceState == null){
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add<FragmentBlank>(R.id.fragment_container_view)
+                add<BlankFragment>(R.id.fragment_container_view)
             }
         }
 //        setContentView(R.layout.activity_main)
