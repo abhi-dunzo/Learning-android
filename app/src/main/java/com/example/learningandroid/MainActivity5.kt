@@ -1,31 +1,15 @@
 package com.example.learningandroid
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Lifecycle
-import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 
 
-class Adapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
-    FragmentStateAdapter(fragmentManager, lifecycle) {
-    private val fragmentList: ArrayList<Fragment> = ArrayList()
-    override fun createFragment(position: Int): Fragment {
-        return fragmentList[position]
-    }
 
-    fun addFragment(fragment: Fragment) {
-        fragmentList.add(fragment)
-    }
-
-    override fun getItemCount(): Int {
-        return fragmentList.size
-    }
-}
 class MainActivity5 : AppCompatActivity() {
-    private var myViewPager2: ViewPager2? = null
+     var myViewPager2: ViewPager2? = null
     private var myAdapter: Adapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +18,8 @@ class MainActivity5 : AppCompatActivity() {
 
         myViewPager2 = findViewById(R.id.viewPager2)
         myAdapter = Adapter(supportFragmentManager, lifecycle)
+
+
 
         // add Fragments in your ViewPagerFragmentAdapter class 
         myAdapter?.addFragment(BlankFragment())
@@ -44,8 +30,18 @@ class MainActivity5 : AppCompatActivity() {
         myViewPager2?.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         myViewPager2?.adapter = this.myAdapter
+        var i = myAdapter?.itemCount
+        Log.d("ViewPager2 " , "hi from activity 5 $i")
 
+        }
+
+    override fun onPause() {
+        super.onPause()
+//        var button :Button = this.findViewById(R.id.button)
+//        var btnColor = resources.getColor(R.color.purple_500)
+//        button.setBackgroundColor(btnColor)
     }
+
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //        val viewPager = findViewById<ViewPager>(R.id.)

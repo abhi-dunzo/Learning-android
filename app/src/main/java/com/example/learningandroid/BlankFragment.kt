@@ -33,8 +33,6 @@ class BlankFragment : Fragment() {
         }
     }
 
-
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Log.d("Fragment State ","Hi from onAttach() fragment1")
@@ -51,19 +49,15 @@ class BlankFragment : Fragment() {
     override fun onPause() {
         super.onPause()
         Log.d("Fragment State ","Hi from onPause() fragment1")
-
     }
-
     override fun onDestroy() {
         super.onDestroy()
         Log.d("Fragment State ","Hi from onDestroy() fragment1")
-
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         Log.d("Fragment State ","Hi from onDestroyView() fragment1")
-
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

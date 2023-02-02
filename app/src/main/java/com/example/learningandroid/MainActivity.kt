@@ -8,16 +8,7 @@ import androidx.fragment.app.add
 import androidx.fragment.app.commit
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
-//    private fun addFragmentToActivity(fragment: Fragment?){
-//
-//        if (fragment == null) return
-//        val fm = supportFragmentManager
-//        val tr = fm.beginTransaction()
-//        tr.add(R.id.framlayout, fragment)
-//        tr.commitAllowingStateLoss()
-//        curFragment = fragment
-//    }
-//    supportFragmentManager.findFragmentById(R.id.blank_fragment) as ExampleFragment
+    //
     override fun onStart() {
         //makes the activity visible to user
         super.onStart()
@@ -28,7 +19,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         // used when we need some logic to be performed only once during the whole lifecycle
         super.onCreate(savedInstanceState)
-        if(savedInstanceState == null){
+        if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add<BlankFragment>(R.id.fragment_container_view)
@@ -50,25 +41,25 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onPause() {
         // works when the application goes in background
         super.onPause()
-        val i = Intent(this , MainActivity4::class.java)
+        val i = Intent(this, MainActivity4::class.java)
         startActivity(i)
         Log.d("onPause() is called ", "hi from onPause() in  mainActivity")
 
     }
 
 
-    override  fun onStop(){
+    override fun onStop() {
         //comes after pause
 
         super.onStop()
-        Log.d("onStop() is called" ,"hi from onStop() in mainActivity")
+        Log.d("onStop() is called", "hi from onStop() in mainActivity")
 
     }
 
     override fun onDestroy() {
         //when app is removed from background
         super.onDestroy()
-        Log.d("onDestroy() is called" ,"hi from onDestroy() in mainActivity")
+        Log.d("onDestroy() is called", "hi from onDestroy() in mainActivity")
 
     }
 

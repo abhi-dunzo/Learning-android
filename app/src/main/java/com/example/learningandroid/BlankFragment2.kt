@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,6 +77,12 @@ override fun onCreate(savedInstanceState: Bundle?) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_blank2, container, false)
     }
+
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+////        super.onViewCreated(view, savedInstanceState)
+//        val tabLayout = view.findViewById<TabLayout>(/* id = */ R.id.tab_layout)
+//        TabLayoutMediator()
+//    }
 //
 //    companion object {
 //        /**
