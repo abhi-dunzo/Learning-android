@@ -8,5 +8,5 @@ this goes in a loop.
 
 
 3 rd page added 
-![image](https://user-images.githubusercontent.com/123369553/216342514-d0563196-75bd-455e-aece-47c3f3ab6ff2.png)
 Worked on the ui layout
+<img width="346" alt="Screenshot 2023-02-02 at 7 08 04 PM" src="https://user-images.githubusercontent.com/123369553/216343360-ef9f3fd2-e769-40b9-a230-7393003a5c2c.png">
