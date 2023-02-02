@@ -9,4 +9,5 @@ this goes in a loop.
 
 3 rd page added 
 Worked on the ui layout
-<img width="346"  alt="Screenshot 2023-02-02 at 10 27 53 PM" src="https://user-images.githubusercontent.com/123369553/216391197-09cc8738-822b-4ee1-9eac-71998319d019.png">
+<img width="339" alt="Screenshot 2023-02-02 at 10 31 57 PM" src="https://user-images.githubusercontent.com/123369553/216392407-444b2039-cc20-4508-a4c3-ecbe150d8bad.png">
+
