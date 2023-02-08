@@ -2,6 +2,7 @@ package com.example.learningandroid
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.*
 
 class MainViewModel : ViewModel(){
@@ -17,6 +18,30 @@ class MainViewModel : ViewModel(){
 
             }
         }
+    }
+
+    private suspend fun sampleOne(): Boolean {
+        delay(1000L)
+        return true
+    }
+    private suspend fun sampleTwo(): Boolean {
+        delay(3000L)
+        return false
+    }
+    fun exampleMethodUsingAsync(){
+        Log.d("exampleMethodUsingAsync" , "hi from Async function()")
+
+        viewModelScope.launch {
+            val one = async { sampleOne()}
+            val two = async { sampleTwo()}
+            if(one.await() && two.await()){
+                Log.d("exampleMethodUsingAsync" , "hi from both returned true ()")
+            }else {
+                Log.d("exampleMethodUsingAsync" , "one is false ")
+
+            }
+        }
+        Log.d("exampleMethodUsingAsync" , " Async function() ending ....")
     }
 
     private suspend fun fetchData() {

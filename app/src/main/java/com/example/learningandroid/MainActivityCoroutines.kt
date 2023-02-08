@@ -16,6 +16,7 @@ class MainActivityCoroutines : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_coroutines)
         val model : MainViewModel by viewModels()
+        model.exampleMethodUsingAsync()
         model.exampleMethod()
         GlobalScope.launch {
             val time  = measureTimeMillis {
